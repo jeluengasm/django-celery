@@ -15,7 +15,7 @@ def test_task():
     assert sample_tasks.create_task.run(3)
 
 @patch("tasks.sample_tasks.create_task.run")
-def test_mock_task(): 
+def test_mock_task():
     assert sample_tasks.create_task.run(1)
     sample_tasks.create_task.run.assert_called_once_with(1)
 
